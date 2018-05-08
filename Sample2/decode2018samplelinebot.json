@@ -15,6 +15,9 @@
         },
         "siteUrl": {
             "type": "string"
+        },
+        "line_access_token": {
+            "type": "string"
         }
 },
     "variables": {},
@@ -24,7 +27,7 @@
             "type": "Microsoft.Logic/workflows",
             "name": "[parameters('workflows_name')]",
             "apiVersion": "2017-07-01",
-            "location": "westcentralus",
+            "location": "[resourceGroup().location]",
             "tags": {},
             "scale": null,
             "properties": {
@@ -137,7 +140,7 @@
                                     {
                                         "name": "bearer",
                                         "type": "String",
-                                        "value": "VLSZwu7+aozSAtn47lfVIvbrxbxDqNMdjWNRvD0T7W8rq5XA+jzIcZBobrF0vYyGS+n19K6CAhncuUf9GcDLm9xYwlryQ5BL99kute5+2lzj+fJX6ZYLuDfH1f7VFkQQI4ac/xY9FEvtan8ZVkiEQAdB04t89/1O/w1cDnyilFU="
+                                        "value": "[parameters('line_access_token')]"
                                     }
                                 ]
                             }
@@ -288,7 +291,7 @@
                             "cognitiveservicescomputervision": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', parameters('connections_name'))]",
                                 "connectionName": "cognitiveservicescomputervision",
-                                "id": "/subscriptions/326a3b11-d573-4c1d-aa3f-b1f75d57a91c/providers/Microsoft.Web/locations/westcentralus/managedApis/cognitiveservicescomputervision"
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/cognitiveservicescomputervision')]"
                             }
                         }
                     }
@@ -303,13 +306,13 @@
             "type": "Microsoft.Web/connections",
             "name": "[parameters('connections_name')]",
             "apiVersion": "2016-06-01",
-            "location": "westcentralus",
+            "location": "[resourceGroup().location]",
             "scale": null,
             "properties": {
                 "displayName": "conOCR",
                 "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/326a3b11-d573-4c1d-aa3f-b1f75d57a91c/providers/Microsoft.Web/locations/westcentralus/managedApis/', parameters('connections_name'))]"
+                    "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/', parameters('connections_name'))]"
                 },
                 "parameterValues": {
                     "apiKey": "[parameters('apiKey')]",
