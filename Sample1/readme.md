@@ -6,9 +6,12 @@
      <img src="http://azuredeploy.net/deploybutton.png"/>		
  </a>		
 
-上の Deploy ボタンをクリック、または新規に作成した Logic Apps で CodeView を開き、WebChatLogicApps.json ファイルの中身を貼り付けして LogicFlow を作成します。<br />
+上の Deploy ボタンをクリックし LogicFlow を作成します。<br />
+
+### 全体図
  ![LogicFlow](https://github.com/ahf0124/decode2018/blob/master/Sample1/websample1_1.png)		<br />
 
+### 作成手順
 Web App Bot を新規に作成します。<br />
 ポータル上から「リソースの作成」をクリック、bot と入力して検索を行うと Web App Bot が表示されるので、それをクリックします。<br />
 ![LogicFlow](https://github.com/ahf0124/decode2018/blob/master/Sample1/websample1_3.png)		<br />
