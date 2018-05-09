@@ -6,6 +6,7 @@
 
 
 ## 問い合わせ先
+LogicFlow-ja https://www.facebook.com/groups/logicflowja/</br>
 Twitter ([@twit_ahf](https://twitter.com/twit_ahf))</br>
 Mail mail_ahf［アットマーク］yahoo.co.jp
 
