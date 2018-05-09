@@ -1,12 +1,6 @@
 # WebChatBot との連携を行う LogicFlow
 
  WebChat で入力された文字列を LogicFlow に送信し、編集を行い結果を Bot からのメッセージとして連携する。<br />
- 
- <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fahf0124%2Fdecode2018%2Fmaster%2FSample1%2FWebChatLogicApps.json" target="_blank">		
-     <img src="http://azuredeploy.net/deploybutton.png"/>		
- </a>		
-
-上の Deploy ボタンをクリックし LogicFlow を作成します。<br />
 
 ### 全体図
  ![LogicFlow](https://github.com/ahf0124/decode2018/blob/master/Sample1/websample1_1.png)		<br />
@@ -31,7 +25,12 @@ build.cmd と入力して Enter を押します。<br />
 ![LogicFlow](https://github.com/ahf0124/decode2018/blob/master/Sample1/websample1_9.png)		<br />
 入力間違いがなければ、ビルドは成功し、Azure 上で実行できる状態となります。<br />
 <br />
-Azure ポータルへ戻り、Web チャットでテストをクリックします。右側に Web チャットが表示されますので、何か文字を入力します。<br />
+ <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fahf0124%2Fdecode2018%2Fmaster%2FSample1%2FWebChatLogicApps.json" target="_blank">		
+     <img src="http://azuredeploy.net/deploybutton.png"/>		
+ </a>		<br />
+上の Deploy ボタンをクリックし LogicFlow を作成します。<br />
+<br />
+LogicFlow が作成されたら Azure ポータルへ戻り、Web チャットでテストをクリックします。右側に Web チャットが表示されますので、何か文字を入力します。<br />
 ![LogicFlow](https://github.com/ahf0124/decode2018/blob/master/Sample1/websample1_10.png)		<br />
 このように、入力した文字数が付与された形で返信があれば、正常に動作しています。<br />
 ![LogicFlow](https://github.com/ahf0124/decode2018/blob/master/Sample1/websample1_11.png)		<br />
