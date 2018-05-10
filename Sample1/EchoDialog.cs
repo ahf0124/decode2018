@@ -35,8 +35,7 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
             }
             else
             {
-                //var logicappsUrl = "[Logic Apps で生成された URL]";
-                var logicappsUrl = "https://prod-31.westcentralus.logic.azure.com:443/workflows/c73c2cf351864f58a28dc4d33b70ba15/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4oH6NWgNaIZtuet9od1b9KxKu9dhS2V3AenUN9f2B9w";
+                var logicappsUrl = "[Logic Apps で生成された URL]";
                 //メッセージを編集する Logic Apps を呼び出す
                 var msg = "";
                 var client = new HttpClient();
