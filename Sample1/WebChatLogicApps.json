@@ -85,7 +85,7 @@
                             "type": "Response",
                             "kind": "Http",
                             "inputs": {
-                                "body": "　@{triggerBody()?['message']}(@{length(triggerBody()?['message'])})",
+                                "body": "　@{triggerBody()?['text']}(@{length(triggerBody()?['text'])})",
                                 "statusCode": 200
                             }
                         }
